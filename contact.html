@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact | Smruti Ranjan Barik</title>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
@@ -13,34 +14,31 @@
     <a href="index.html" class="glow-btn">Home</a>
   </nav>
 </header>
-<div id="success-popup" class="popup">
+
+<!-- Success Popup -->
+<div id="success-popup" class="popup" style="display:none;">
   <div class="popup-content">
     <p>Message sent successfully! I will get back to you soon.</p>
     <button id="close-popup">Close</button>
   </div>
 </div>
+
+<!-- Contact Section -->
 <section id="contact-section" class="contact-section-modern">
   <div class="contact-content">
     <div class="contact-form">
       <h2>Let's chat today <span>👋</span></h2>
       <p class="subtitle">Let's get in touch.</p>
-      <form>
-        <label>Name</label>
-        <input type="text" placeholder="Your Name" required />
 
-        <label>E-Mail</label>
-        <input type="email" placeholder="Your Mail" required />
+      <form id="contact-form">
+        <label for="user_name">Name</label>
+        <input type="text" id="user_name" name="user_name" placeholder="Your Name" required />
 
-<!--        <label>Services</label>-->
-<!--        <div class="services">-->
-<!--          <button type="button">Web Design</button>-->
-<!--          <button type="button">Web Development</button>-->
-<!--          <button type="button">Logo Design</button>-->
-<!--          <button type="button">Other</button>-->
-<!--        </div>-->
+        <label for="user_email">E-Mail</label>
+        <input type="email" id="user_email" name="user_email" placeholder="Your Mail" required />
 
-        <label>Message</label>
-        <textarea placeholder="Message" rows="4" required></textarea>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Message" rows="4" required></textarea>
 
         <button type="submit" class="send-btn">Send Message</button>
       </form>
